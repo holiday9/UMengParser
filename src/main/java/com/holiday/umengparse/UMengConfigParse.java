@@ -88,7 +88,7 @@ public class UMengConfigParse {
             String annotation = "   //" + eventPathList.get(index) + "\n";
             FileAppend.append1(androidFilePath, annotation);
 
-            String sourceLineTemplate = "   public static final %s = \"%s\";";
+            String sourceLineTemplate = "   public static final String %s = \"%s\";";
             String varName = getVarName(pre, zone, index);
             String sourceLine = String.format(sourceLineTemplate, varName, varName) + "\n";
             FileAppend.append1(androidFilePath, sourceLine);
